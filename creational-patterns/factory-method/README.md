@@ -46,7 +46,7 @@ type Shape interface {
 ```
 
 In the following code snippets, we will illustrate two implementations of `Shape` 
-interface `Circle` and `Ractangle`:
+interface `Circle` and `Rectangle`:
 
 ```Golang
 type Circle struct {
@@ -99,9 +99,9 @@ func (factory *CircleFactory) Create(viewport Viewport) Shape {
 The `RectangleFactory` produces a rectangle that fits the viewport:
 
 ```Golang
-type RactangleFactory struct{}
+type RectangleFactory struct{}
 
-func (factory *RactangleFactory) Create(viewport Viewport) Shape {
+func (factory *RectangleFactory) Create(viewport Viewport) Shape {
 	return &Rectangle{
 		Location: viewport.Location,
 		Size:     viewport.Size,
